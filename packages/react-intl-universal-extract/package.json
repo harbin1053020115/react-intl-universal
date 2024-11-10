@@ -1,6 +1,6 @@
 {
   "name": "react-intl-universal-extract",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A react-intl-universal message extractor",
   "keywords": [
     "intl",
@@ -87,5 +87,10 @@
       }
     },
     "testEnvironment": "node"
+  },
+  "homepage": "https://github.com/alibaba/react-intl-universal/blob/master/packages/react-intl-universal-extract/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba/react-intl-universal.git"
   }
 }

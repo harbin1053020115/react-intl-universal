@@ -37,7 +37,7 @@ npm install --save-dev react-intl-universal-extract
 In `package.json`, add a script:
 ```json
 "scripts": {
-  "intl:extract": "react-intl-universal-extract --cmd extract --source-path ./src --output-path ./src/locales/en_US.json --verbose",
+  "intl:extract": "npx react-intl-universal-extract --cmd extract --source-path ./src --output-path ./src/locales/en_US.json --verbose",
 }
 ```
 Then run `npm run intl:extract`.
