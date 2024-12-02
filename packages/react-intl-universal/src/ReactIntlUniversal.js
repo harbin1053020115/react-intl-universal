@@ -169,6 +169,22 @@ class ReactIntlUniversal {
       this.getLocaleFromBrowser()
     );
   }
+  
+  /**
+   * Change current locale
+   * @param {string} newLocale Current locale such as 'en-US'
+   */
+  changeCurrentLocale(newLocale) {
+    if (!this.options.locales || !this.options.locales[newLocale]) {
+      let errorMsg = `react-intl-universal locales data "${newLocale}" not exists.`;
+      if (!this.options.locales) {
+        errorMsg += 'You should call init function first.'
+      }
+      this.options.warningHandler(errorMsg);
+      return;
+    }
+    this.options.currentLocale = newLocale;
+  }
 
   /**
    * Initialize properties and load CLDR locale data according to currentLocale

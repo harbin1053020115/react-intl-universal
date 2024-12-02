@@ -19,6 +19,13 @@ test("Set specific locale", () => {
   expect(intl.get("SIMPLE")).toBe("Simple");
 });
 
+test("Change specific locale", () => {
+  intl.init({ locales, currentLocale: "en-US" });
+  expect(intl.get("SIMPLE")).toBe("Simple");
+  intl.changeCurrentLocale("zh-CN");
+  expect(intl.get("SIMPLE")).toBe("简单");
+});
+
 test("Message with variables", () => {
   intl.init({ locales, currentLocale: "en-US" });
   expect(intl.get("HELLO", { name: "Tony" })).toBe("Hello, Tony");
